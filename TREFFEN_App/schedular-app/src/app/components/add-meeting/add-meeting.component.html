@@ -1,0 +1,49 @@
+<div class="container my-5">
+  <h1 class="mb-3">Add New Meeting</h1>
+
+  <div class="row">
+    <div class="col-6">
+        <form #form="ngForm">
+            <div class="mb-3">
+              <label for="meeting_id" class="form-label">Meeting Id</label>
+              <!-- <mat-label >Meeting Id</mat-label>
+              <input mat-input > -->
+
+              <input type="text" class="form-control" id="meeting_id"
+                name="meeting_id" [(ngModel)]="addMeetingRequest.Meeting_Id" readonly>
+            </div>
+            <div class="mb-3">
+                <!-- <label for="meeting_agenda" class="form-label">Meeting Agenda</label> -->
+                <input type="text" class="form-control" id="meeting_agenda"
+                name="meeting_agenda" [(ngModel)]="addMeetingRequest.Meeting_Agenda">
+            </div>
+            <div class="mb-3">
+                <label for="meeting_duration" class="form-label">Meeting Duration(Mins)</label>
+                <input type="text" class="form-control" id="meeting_duration"
+                name="meeting_duration" [(ngModel)]="addMeetingRequest.Meeting_Duration">
+            </div>
+            <div class="mb-3">
+              <!-- <label for="meeting_date" class="form-label">Meeting Date(Mins)</label>
+              <!-- <input type="text" class="form-control" id="meeting_date"
+              name="meeting_date" [(ngModel)]="addMeetingRequest.Created_Timestamp"> -->
+              <mat-form-field appearance="fill">
+                <mat-label>Meeting Date</mat-label>
+                <input matInput [matDatepicker]="dp" [formControl]="date">
+                <mat-hint>MMMM DD, YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+                <mat-datepicker #dp></mat-datepicker>
+              </mat-form-field>
+          </div>
+            <div class="mb-3">
+                <label for="meeting_room" class="form-label">Meeting Room</label>
+                <select name="selectedOption" id="meeting_room" class="form-control" [(ngModel)]="addMeetingRequest.Meeting_Room">
+                  <option *ngFor="let option of meetingoptions" [value]="option" >{{option}}</option>
+                  <option value="" disabled selected>Choose Meeting Room</option>
+              </select>
+            </div>
+            <button mat-raised-button color="primary"  (click)="addMeeting()">Save</button>
+          </form>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+.card {
+  border: none;
+  width: 900px;
+  padding: 40px;
+  top:275px;
+  left:100%;
+  transform: translate(-50%, -50%);
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+}
+
+p {
+  color:#fff;
+  font-size: larger;
+}
+
+.card h1{
+  color:#fff;
+  font-style: italic;
+  font-weight: bold;
+  font-family:cursive;
+  text-decoration: underline;
+}

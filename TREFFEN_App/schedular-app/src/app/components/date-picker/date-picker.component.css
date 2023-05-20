@@ -1,0 +1,34 @@
+.example-wrapper {
+  min-height: 280px;
+  align-content: flex-start;
+}
+
+.example-wrapper p,
+.example-col p {
+  margin: 0 0 10px;
+}
+
+.example-config {
+  margin: 0 0 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+app-date-picker {
+  display: block;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+app-date-picker > .k-icon.k-i-loading {
+  font-size: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+kendo-datetimepicker {
+  width: 12.4em;
+}

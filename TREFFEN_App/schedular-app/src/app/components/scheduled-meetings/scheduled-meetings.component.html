@@ -1,0 +1,27 @@
+<div class="container my-5">
+  <h1 class="mb-3">Scheduled Meetings List With Date</h1>
+
+<table class="table table-dark table-bordered table-hover" *ngIf="treffens && treffens.length > 0">
+  <thead>
+      <tr class="bg-success">
+          <th>Meeting Id</th>
+          <th>Meeting Agenda(Title)</th>
+          <th>Duration(Mins)</th>
+          <th>Meeting Room</th>
+          <th>Meeting Date</th>
+      </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let treffen of treffens">
+      <tr>
+        <td >{{ treffen.Meeting_Id}}</td>
+        <td>{{ treffen.Meeting_Agenda}}</td>
+        <td>{{ treffen.Meeting_Duration}}</td>
+        <td>{{ treffen.Meeting_Room}}</td>
+        <td mat-cell [style.color]="isAfterToday(treffen.Created_Timestamp) == true ? '#ff1493' : '#ffb752'">{{ treffen.Created_Timestamp | date:'dd-MM-yyyy'}}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+<p *ngIf="!treffens || treffens.length == 0">No Meeting sessions are available </p>
+</div>

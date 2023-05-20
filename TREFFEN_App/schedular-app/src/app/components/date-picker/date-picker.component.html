@@ -1,0 +1,8 @@
+ <div class="example-config">
+      Selected value is: {{ value | date : format }}
+    </div>
+    <div class="example-wrapper">
+      <p>Select date and time:</p>
+      <kendo-datetimepicker [format]="format" [(value)]="value">
+      </kendo-datetimepicker>
+    </div>

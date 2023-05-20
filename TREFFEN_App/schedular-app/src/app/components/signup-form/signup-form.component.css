@@ -1,0 +1,33 @@
+.card {
+
+  border: none;
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  top:350px;
+  left:100%;
+  transform: translate(-50%, -50%);
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+  display:inline-block;
+}
+
+.card h1, h6{
+  color:#fff
+}
+
+.form-label {
+  color:#fff
+}
+
+.anchor {
+  color:#fff
+}
+
+.card h1{
+  font-style: italic;
+  font-weight: bold;
+  font-family:cursive;
+}
+
+

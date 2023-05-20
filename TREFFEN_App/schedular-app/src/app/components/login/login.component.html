@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>TREFFEN</h1>
+          <h3> </h3>
+        </div>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword1">
+          </div>
+          <button mat-raised-button color="accent"  (click)="getDashboard()">Login</button>
+          <!-- <button type="submit" class="btn btn-primary" (click)="getDashboard()">Login</button> -->
+        </form>
+        <h4></h4>
+        <a routerLink="/signup" class="anchor">New User? Click here to Sign Up </a>
+      </div>
+    </div>
+  </div>
+</div>

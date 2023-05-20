@@ -1,0 +1,39 @@
+<div class="container my-5">
+  <h1 class="mb-3">Edit Meeting</h1>
+
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm">
+        <div class="mb-3">
+          <label for="meeting_id" class="form-label">Meeting Id</label>
+          <input type="text" class="form-control" id="meeting_id"
+            name="meeting_id" [(ngModel)]="meetingRequest.Meeting_Id" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="meeting_agenda" class="form-label">Meeting Agenda</label>
+            <input type="text" class="form-control" id="meeting_agenda"
+            name="meeting_agenda" [(ngModel)]="meetingRequest.Meeting_Agenda">
+        </div>
+        <div class="mb-3">
+            <label for="meeting_duration" class="form-label">Meeting Duration(Mins)</label>
+            <input type="text" class="form-control" id="meeting_duration"
+            name="meeting_duration" [(ngModel)]="meetingRequest.Meeting_Duration">
+        </div>
+        <div class="mb-3">
+            <label for="meeting_room" class="form-label">Meeting Room</label>
+            <select name="meeting_room" id="meeting_room" class="form-control" [(ngModel)]="meetingRequest.Meeting_Room">
+              <option *ngFor="let option of meetingoptions" [value]="option" >{{option}}</option>
+          </select>
+
+        </div >
+        <div class="mb-3">
+             <button mat-raised-button color="primary" style="width:7em;" class="btn btn-info mx-3"
+             (click)="updateMeeting(meetingRequest.Meeting_Id)">Update</button>
+            <button type="button" style="width:7em;" class="btn btn-danger mx-3"
+            (click)="deleteMeeting(meetingRequest.Meeting_Id)">Delete</button>
+            <button mat-raised-button color="accent" [routerLink]="['/meetings']" type="button" style="width:7em;" class="btn btn-primary">Back</button>
+          </div>
+          </form>
+    </div>
+  </div>
+</div>

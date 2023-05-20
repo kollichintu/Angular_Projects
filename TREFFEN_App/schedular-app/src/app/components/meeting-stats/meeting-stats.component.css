@@ -1,0 +1,5 @@
+.chartcontainer {
+  position:centered;
+  width:65%;
+  flex-grow:1;
+}
